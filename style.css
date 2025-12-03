@@ -12,7 +12,8 @@ html {
 }
 
 body {
-  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
   color: #5e6282;
   background-color: #ffffff;
   line-height: 1.6;
@@ -25,7 +26,7 @@ img {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #000000;
 }
 
 ul {
@@ -392,7 +393,7 @@ section {
   box-shadow: var(--shadow-soft);
 }
 
-.service-card--active::after {
+/* .service-card--active::after {
   content: "";
   position: absolute;
   left: -18px;
@@ -402,7 +403,7 @@ section {
   background: #df6951;
   border-radius: 18px 0 12px 0;
   z-index: -1;
-}
+} */
 
 .service-icon {
   width: 50px;
@@ -458,9 +459,13 @@ section {
 }
 
 .destination-image img {
+.destination-image img {
   width: 100%;
-  height: 220px;
+  height: 180px;   /* Adjust the height here */
   object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
 }
 
 .destination-body {
@@ -632,15 +637,12 @@ section {
   background: #ffffff;
 }
 
-
 .testimonials-container {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 3rem;
   align-items: start;
 }
-
-
 
 .testimonials-text .section-title {
   max-width: 320px;
@@ -651,27 +653,24 @@ section {
   width: 100%;
   max-width: 360px;
   margin-left: auto;
+  min-height: 250px;
 }
 
-
 .testimonial {
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: var(--shadow-soft);
-  padding: 1.6rem 1.5rem;
   opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-  position: relative;
-  inset: 0;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateX(40px); /* move from right */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .testimonial.active {
   opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  transform: translateX(0);
 }
+
 
 .testimonial-text {
   font-size: 0.9rem;
@@ -702,10 +701,11 @@ section {
 
 /* Controls */
 .testimonial-controls {
+  position: absolute;
+  bottom: 0px; /* moves slightly below card */
+  right: 0;
   display: flex;
-  justify-content: flex-end;
   gap: 0.6rem;
-  margin-top: 1.1rem;
 }
 
 .ctrl-btn {
@@ -725,25 +725,24 @@ section {
   background: #f5f5f5;
 }
 
-.testimonial-dots {
+/* .testimonial-dots {
   display: flex;
   gap: 0.4rem;
   justify-content: center;
   margin-top: 0.8rem;
-}
+} */
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  border: none;
-  background: #e5e5e5;
+/* .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
-
 .dot.active {
-  width: 20px;
-  background: var(--primary-blue);
-}
+  width: 24px;
+  border-radius: 999px;
+} */
+
 
 /* Brand row */
 .brand-row {
@@ -760,13 +759,17 @@ section {
   filter: grayscale(40%);
 }
 
-.brand{
-    scale: 3.5;
+.brand {
+  scale: 3.5;
 }
 
 /* ============ SUBSCRIBE ============ */
 .subscribe {
-  background: radial-gradient(circle at top right, rgba(132, 60, 247, 0.12), transparent),
+  background: radial-gradient(
+      circle at top right,
+      rgba(132, 60, 247, 0.12),
+      transparent
+    ),
     #fefcfb;
 }
 
@@ -848,11 +851,14 @@ section {
 }
 
 .footer-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1.1fr);
   gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 2rem;
+  text-align: center;
 }
 
 .footer-brand p {
@@ -884,14 +890,15 @@ section {
 }
 
 .footer-right {
-  justify-self: end;
-  text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem
 }
 
 .social-row {
   display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
+  justify-content: space-between;
+  gap: 1.5rem;
   margin-bottom: 0.7rem;
 }
 
@@ -951,13 +958,28 @@ section {
   }
 
   .footer-right {
-    justify-self: flex-start;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1.2rem;
   }
 
   .footer-columns {
     grid-template-columns: repeat(3, minmax(0, 120px));
   }
+
+  .brand-row {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem; /* spacing between logos */
+  }
+
+  .brand-row img {
+    max-height: 30px;
+    object-fit: contain;
+  }
+
 }
 
 @media (max-width: 860px) {
@@ -972,6 +994,12 @@ section {
   .brand-row {
     justify-content: center;
   }
+
+  .brand-row {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
@@ -980,6 +1008,11 @@ section {
     display: none;
   }
 
+  .brand-row {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
   .nav-toggle {
     display: flex;
   }
@@ -995,10 +1028,10 @@ section {
     top: 100%;
     right: 0;
     padding: 1rem 1.5rem 0.5rem;
-    background: rgba(255, 255, 255, 0.98);
+    background: #ff7d68;
     flex-direction: column;
     gap: 0.8rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ff7d68;
   }
 
   .nav-actions.open {
@@ -1007,9 +1040,11 @@ section {
     top: calc(100% + 160px);
     right: 0;
     padding: 0 1.5rem 1rem;
-    background: rgba(255, 255, 255, 0.98);
-    justify-content: flex-start;
-    gap: 1rem;
+    background: #ff7d68;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 5px;
+    gap: 0.5rem;
   }
 
   .hero-container {
@@ -1047,6 +1082,12 @@ section {
 @media (max-width: 480px) {
   .container {
     width: min(100% - 2rem, 100%);
+  }
+
+  .brand-row {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .step-item {
