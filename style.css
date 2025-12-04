@@ -128,7 +128,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.4rem 0;
+  padding: 0.4rem 0;
 }
 
 .logo {
@@ -438,53 +438,66 @@ section {
   background-color: var(--bg-light);
 }
 
-.destinations-grid {
+/* Modern Travel Cards */
+.travel-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+  align-items: stretch;
 }
 
-.destination-card {
-  background: var(--card-bg);
-  border-radius: 24px;
+.travel-card {
+  background: #fff;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  cursor: pointer;
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
-}
-
-.destination-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.15);
-}
-
-.destination-image img {
-.destination-image img {
-  width: 100%;
-  height: 180px;   /* Adjust the height here */
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
-}
-
-}
-
-.destination-body {
-  padding: 1.2rem 1.2rem 1rem;
-  font-size: 0.9rem;
-  color: #84829a;
-}
-
-.destination-row {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.4rem;
-  color: #080809;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.destination-days span {
-  font-size: 0.85rem;
+.travel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
+
+.travel-img img {
+  width: 100%;
+  height: 200px;
+  /* object-fit: cover; */
+  display: block;
+}
+
+.travel-info {
+  padding: 1rem 1.2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.travel-info h3 {
+  font-size: 1.05rem;
+  color: #1f2937;
+  margin-bottom: 0.6rem;
+}
+
+.travel-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.days {
+  color: #6b7280;
+}
+
+.price {
+  font-weight: 700;
+  color: #4b40c5;
+}
+
 
 /* ============ BOOKING ============ */
 .booking-container {

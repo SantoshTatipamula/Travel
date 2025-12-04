@@ -1,426 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jadoo Travel Landing Page</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadoo Travel Landing Page</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Volkhov:wght@700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="icon" type="image/png" href="favicon.png?v=3">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Volkhov:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon.png?v=3" />
 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">Marso</div>
 
+        <nav class="nav-links" id="navLinks">
+          <a href="#destinations">Destinations</a>
+          <a href="#hotels">Hotels</a>
+          <a href="#flights">Flights</a>
+          <a href="#book">Bookings</a>
+        </nav>
 
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- ================= NAVBAR ================= -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <div class="logo">Marso</div>
+        <div class="nav-actions">
+          <a href="#" class="nav-login">Login</a>
+          <a href="#" class="btn btn-outline">Sign up</a>
+          <button class="lang-switch">EN <span class="chevron">⌄</span></button>
+        </div>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#destinations">Destinations</a>
-        <a href="#hotels">Hotels</a>
-        <a href="#flights">Flights</a>
-        <a href="#book">Bookings</a>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="#" class="nav-login">Login</a>
-        <a href="#" class="btn btn-outline">Sign up</a>
-        <button class="lang-switch">
-          EN <span class="chevron">⌄</span>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
+    </header>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- ================= HERO ================= -->
-    <section class="hero" id="home">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <p class="hero-kicker">BEST DESTINATIONS AROUND THE WORLD</p>
-          <h1 class="hero-title">
-            Travel, enjoy<br />
-            and live a new<br />
-            and full life
-          </h1>
-          <p class="hero-subtitle">
-            Built Wicket longer admire do barton vanity itself do in it.
-            Preferred to sportsmen it engrossed listening. Park gate sell
-            they west hard for the.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#book" class="btn btn-primary">Find out more</a>
-            <button class="hero-play">
-              <span class="play-icon">▶</span>
-              <span>Play Demo</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="hero-visual">
-          <div class="hero-image">
-            <!-- Replace with your main hero image -->
-            <img src="TravellerWithBag.png" alt="Traveler with backpack" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SERVICES ================= -->
-    <section class="services" id="services">
-      <div class="container">
-        <p class="section-kicker">CATEGORY</p>
-        <h2 class="section-title">We Offer Best Services</h2>
-
-        <div class="services-grid">
-          <!-- Service 1 -->
-          <article class="service-card">
-            <div class="service-icon">
-              <!-- Placeholder icon -->
-              <span>☁</span>
-            </div>
-            <h3>Calculated Weather</h3>
-            <p>
-              Barton vanity itself do in it. Preferd to men it engrossed
-              listening.
-            </p>
-          </article>
-
-          <!-- Service 2 (highlighted) -->
-          <article class="service-card service-card--active">
-            <div class="service-icon">
-              <span>✈</span>
-            </div>
-            <h3>Best Flights</h3>
-            <p>
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="home">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <p class="hero-kicker">BEST DESTINATIONS AROUND THE WORLD</p>
+            <h1 class="hero-title">
+              Travel, enjoy<br />
+              and live a new<br />
+              and full life
+            </h1>
+            <p class="hero-subtitle">
               Built Wicket longer admire do barton vanity itself do in it.
+              Preferred to sportsmen it engrossed listening. Park gate sell they
+              west hard for the.
             </p>
-          </article>
 
-          <!-- Service 3 -->
-          <article class="service-card">
-            <div class="service-icon">
-              <span>🎟</span>
+            <div class="hero-actions">
+              <a href="#book" class="btn btn-primary">Find out more</a>
+              <button class="hero-play">
+                <span class="play-icon">▶</span>
+                <span>Play Demo</span>
+              </button>
             </div>
-            <h3>Local Events</h3>
-            <p>
-              Engrossed listening. Park gate sell they west hard for the.
-            </p>
-          </article>
-
-          <!-- Service 4 -->
-          <article class="service-card">
-            <div class="service-icon">
-              <span>⚙</span>
-            </div>
-            <h3>Customization</h3>
-            <p>
-              We deliver outsourced aviation services for military customers.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= DESTINATIONS ================= -->
-    <section class="destinations" id="destinations">
-      <div class="container">
-        <p class="section-kicker">Top Selling</p>
-        <h2 class="section-title">Top Destinations</h2>
-
-        <div class="destinations-grid">
-          <!-- Card 1 -->
-          <article class="destination-card">
-            <div class="destination-image">
-              <img src="golden temple.jpg" alt="GoldenTemple" />
-            </div>
-            <div class="destination-body">
-              <div class="destination-row">
-                <span>Punjab, India</span>
-                <span>&#8377; 10000</span>
-              </div>
-              <div class="destination-days">
-                <span>2 Days Trip</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="destination-card">
-            <div class="destination-image">
-              <img src="Hyderabad.jpg" alt="Charminar" />
-            </div>
-            <div class="destination-body">
-              <div class="destination-row">
-                <span>Telangana, India</span>
-                <span>&#8377; 14000</span>
-              </div>
-              <div class="destination-days">
-                <span>4 Days Trip</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="destination-card">
-            <div class="destination-image">
-              <img src="goa.jpeg" alt="Goa" />
-            </div>
-            <div class="destination-body">
-              <div class="destination-row">
-                <span>Goa, India</span>
-                <span>&#8377; 30000</span>
-              </div>
-              <div class="destination-days">
-                <span>8 Days Trip</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= BOOKING STEPS ================= -->
-    <section class="booking" id="book">
-      <div class="container booking-container">
-        <div class="booking-text">
-          <p class="section-kicker">Easy and Fast</p>
-          <h2 class="section-title">Book Your Next Trip In 3 Easy Steps</h2>
-
-          <ul class="steps-list">
-            <li class="step-item">
-              <div class="step-icon step-icon--orange">1</div>
-              <div>
-                <h3>Choose Destination</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
-                  tortor tempus.
-                </p>
-              </div>
-            </li>
-            <li class="step-item">
-              <div class="step-icon step-icon--blue">2</div>
-              <div>
-                <h3>Make Payment</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
-                  tortor tempus.
-                </p>
-              </div>
-            </li>
-            <li class="step-item">
-              <div class="step-icon step-icon--green">3</div>
-              <div>
-                <h3>Reach Airport on Selected Date</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna,
-                  tortor tempus.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <aside class="booking-card">
-          <div class="booking-thumb">
-            <img src="Triptogreece.jpg" alt="Trip to Greece" />
           </div>
-          <div class="booking-body">
-            <h3>Trip To Greece</h3>
-            <p>14-29 June | by Robbin joseph</p>
 
-            <div class="booking-tags">
-              <span>✈</span>
-              <span>🏝</span>
-              <span>🏨</span>
+          <div class="hero-visual">
+            <div class="hero-image">
+              <!-- Replace with your main hero image -->
+              <img src="TravellerWithBag.png" alt="Traveler with backpack" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SERVICES ================= -->
+      <section class="services" id="services">
+        <div class="container">
+          <p class="section-kicker">CATEGORY</p>
+          <h2 class="section-title">We Offer Best Services</h2>
+
+          <div class="services-grid">
+            <!-- Service 1 -->
+            <article class="service-card">
+              <div class="service-icon">
+                <!-- Placeholder icon -->
+                <span>☁</span>
+              </div>
+              <h3>Calculated Weather</h3>
+              <p>
+                Barton vanity itself do in it. Preferd to men it engrossed
+                listening.
+              </p>
+            </article>
+
+            <!-- Service 2 (highlighted) -->
+            <article class="service-card service-card--active">
+              <div class="service-icon">
+                <span>✈</span>
+              </div>
+              <h3>Best Flights</h3>
+              <p>
+                Built Wicket longer admire do barton vanity itself do in it.
+              </p>
+            </article>
+
+            <!-- Service 3 -->
+            <article class="service-card">
+              <div class="service-icon">
+                <span>🎟</span>
+              </div>
+              <h3>Local Events</h3>
+              <p>Engrossed listening. Park gate sell they west hard for the.</p>
+            </article>
+
+            <!-- Service 4 -->
+            <article class="service-card">
+              <div class="service-icon">
+                <span>⚙</span>
+              </div>
+              <h3>Customization</h3>
+              <p>
+                We deliver outsourced aviation services for military customers.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DESTINATIONS ================= -->
+      <section class="destinations" id="destinations">
+        <div class="container">
+          <p class="section-kicker">Top Selling</p>
+          <h2 class="section-title">Top Destinations</h2>
+
+          <div class="travel-grid">
+            <div class="travel-card">
+              <div class="travel-img">
+                <img src="golden temple.jpg" alt="" />
+              </div>
+              <div class="travel-info">
+                <h3>Punjab, India</h3>
+                <div class="travel-meta">
+                  <span class="days">2 Days Trip</span>
+                  <span class="price">₹ 10000</span>
+                </div>
+              </div>
             </div>
 
-            <div class="booking-footer">
-              <div class="people-going">
-                <span class="avatar-circle">24</span>
-                <p><strong>24 people</strong> going</p>
+            <div class="travel-card">
+              <div class="travel-img">
+                <img src="Hyderabad.jpg" alt="" />
               </div>
-              <div class="bookmark">
-                <span>♥</span>
+              <div class="travel-info">
+                <h3>Telangana, India</h3>
+                <div class="travel-meta">
+                  <span class="days">4 Days Trip</span>
+                  <span class="price">₹ 14000</span>
+                </div>
               </div>
             </div>
 
-            <div class="booking-status">
-              <div>
-                <h4>Ongoing</h4>
-                <p>Trip to Rome</p>
+            <div class="travel-card">
+              <div class="travel-img">
+                <img src="goa.jpeg" alt="" />
               </div>
-              <div class="booking-progress">
-                <p>40% completed</p>
-                <div class="progress-bar">
-                  <span></span>
+              <div class="travel-info">
+                <h3>Goa, India</h3>
+                <div class="travel-meta">
+                  <span class="days">8 Days Trip</span>
+                  <span class="price">₹ 30000</span>
                 </div>
               </div>
             </div>
           </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ================= TESTIMONIALS ================= -->
-    <section class="testimonials" id="testimonials">
-      <div class="container testimonials-container">
-        <div class="testimonials-text">
-          <p class="section-kicker">TESTIMONIALS</p>
-          <h2 class="section-title">What People Say About Us.</h2>
         </div>
+      </section>
 
-        <div class="testimonials-slider" id="testimonialSlider">
-          <!-- Testimonial 1 -->
-          <article class="testimonial active" data-index="0">
-            <p class="testimonial-text">
-              “On the Windows talking painted pasture yet its express parties
-              use. Sure last upon he same as knew next. Of believed or diverted
-              no.”
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="Profile.png" alt="Mike Taylor" />
+      <!-- ================= BOOKING STEPS ================= -->
+      <section class="booking" id="book">
+        <div class="container booking-container">
+          <div class="booking-text">
+            <p class="section-kicker">Easy and Fast</p>
+            <h2 class="section-title">Book Your Next Trip In 3 Easy Steps</h2>
+
+            <ul class="steps-list">
+              <li class="step-item">
+                <div class="step-icon step-icon--orange">1</div>
+                <div>
+                  <h3>Choose Destination</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Urna, tortor tempus.
+                  </p>
+                </div>
+              </li>
+              <li class="step-item">
+                <div class="step-icon step-icon--blue">2</div>
+                <div>
+                  <h3>Make Payment</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Urna, tortor tempus.
+                  </p>
+                </div>
+              </li>
+              <li class="step-item">
+                <div class="step-icon step-icon--green">3</div>
+                <div>
+                  <h3>Reach Airport on Selected Date</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Urna, tortor tempus.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="booking-card">
+            <div class="booking-thumb">
+              <img src="Triptogreece.jpg" alt="Trip to Greece" />
+            </div>
+            <div class="booking-body">
+              <h3>Trip To Greece</h3>
+              <p>14-29 June | by Robbin joseph</p>
+
+              <div class="booking-tags">
+                <span>✈</span>
+                <span>🏝</span>
+                <span>🏨</span>
               </div>
-              <div>
-                <h4>Mike Taylor</h4>
-                <p>Lahore, Pakistan</p>
+
+              <div class="booking-footer">
+                <div class="people-going">
+                  <span class="avatar-circle">24</span>
+                  <p><strong>24 people</strong> going</p>
+                </div>
+                <div class="bookmark">
+                  <span>♥</span>
+                </div>
+              </div>
+
+              <div class="booking-status">
+                <div>
+                  <h4>Ongoing</h4>
+                  <p>Trip to Rome</p>
+                </div>
+                <div class="booking-progress">
+                  <p>40% completed</p>
+                  <div class="progress-bar">
+                    <span></span>
+                  </div>
+                </div>
               </div>
             </div>
-          </article>
+          </aside>
+        </div>
+      </section>
 
-          <!-- Testimonial 2 -->
-          <article class="testimonial" data-index="0">
-            <p class="testimonial-text">
-              “On the Windows talking painted pasture yet its express parties
-              use. Sure last upon he same as knew next. Of believed or diverted
-              no.”
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <img src="Profile.png" alt="Chris Thomas" />
+      <!-- ================= TESTIMONIALS ================= -->
+      <section class="testimonials" id="testimonials">
+        <div class="container testimonials-container">
+          <div class="testimonials-text">
+            <p class="section-kicker">TESTIMONIALS</p>
+            <h2 class="section-title">What People Say About Us.</h2>
+          </div>
+
+          <div class="testimonials-slider" id="testimonialSlider">
+            <!-- Testimonial 1 -->
+            <article class="testimonial active" data-index="0">
+              <p class="testimonial-text">
+                “On the Windows talking painted pasture yet its express parties
+                use. Sure last upon he same as knew next. Of believed or
+                diverted no.”
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <img src="Profile.png" alt="Mike Taylor" />
+                </div>
+                <div>
+                  <h4>Mike Taylor</h4>
+                  <p>Lahore, Pakistan</p>
+                </div>
               </div>
-              <div>
-                <h4>Chris Thomas</h4>
-                <p>CEO of Red Button</p>
+            </article>
+
+            <!-- Testimonial 2 -->
+            <article class="testimonial" data-index="0">
+              <p class="testimonial-text">
+                “On the Windows talking painted pasture yet its express parties
+                use. Sure last upon he same as knew next. Of believed or
+                diverted no.”
+              </p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <img src="Profile.png" alt="Chris Thomas" />
+                </div>
+                <div>
+                  <h4>Chris Thomas</h4>
+                  <p>CEO of Red Button</p>
+                </div>
               </div>
+            </article>
+
+            <div class="testimonial-controls">
+              <button class="ctrl-btn" data-direction="prev">‹</button>
+              <button class="ctrl-btn" data-direction="next">›</button>
             </div>
-          </article>
 
-          <div class="testimonial-controls">
-            <button class="ctrl-btn" data-direction="prev">‹</button>
-            <button class="ctrl-btn" data-direction="next">›</button>
-          </div>
-
-          <div class="testimonial-dots">
-            <button class="dot active" data-index="0"></button>
-            <button class="dot" data-index="1"></button>
+            <div class="testimonial-dots">
+              <button class="dot active" data-index="0"></button>
+              <button class="dot" data-index="1"></button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="container brand-row">
-        <img class="brand" src="Axon.png" alt="Axon"/>
-        <img class="brand" src="Jetstar.png" alt="Jetstar" />
-        <img class="brand" src="Expedia.png" alt="Expedia" />
-        <img src="Qantas.png" alt="Qantas" />
-        <img src="Alitalia.png" alt="Alitalia" />
-      </div>
-    </section>
+        <div class="container brand-row">
+          <img class="brand" src="Axon.png" alt="Axon" />
+          <img class="brand" src="Jetstar.png" alt="Jetstar" />
+          <img class="brand" src="Expedia.png" alt="Expedia" />
+          <img src="Qantas.png" alt="Qantas" />
+          <img src="Alitalia.png" alt="Alitalia" />
+        </div>
+      </section>
 
-    <!-- ================= SUBSCRIBE ================= -->
-    <section class="subscribe" id="subscribe">
-      <div class="container subscribe-container">
-        <h2>
-          Subscribe to get information, latest news and other interesting
-          offers about Jadoo
-        </h2>
+      <!-- ================= SUBSCRIBE ================= -->
+      <section class="subscribe" id="subscribe">
+        <div class="container subscribe-container">
+          <h2>
+            Subscribe to get information, latest news and other interesting
+            offers about Jadoo
+          </h2>
 
-        <form class="subscribe-form" id="subscribeForm" novalidate>
-          <div class="input-wrapper">
-            <span class="input-icon">@</span>
-            <input
-              type="email"
-              id="emailInput"
-              placeholder="Your email"
-              required
-            />
+          <form class="subscribe-form" id="subscribeForm" novalidate>
+            <div class="input-wrapper">
+              <span class="input-icon">@</span>
+              <input
+                type="email"
+                id="emailInput"
+                placeholder="Your email"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+
+          <p class="subscribe-message" id="subscribeMessage"></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-brand">
+          <div class="logo logo-footer">Marso</div>
+          <p>Book your trip in minute, get full control for much longer.</p>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Mobile</a>
           </div>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-
-        <p class="subscribe-message" id="subscribeMessage"></p>
-      </div>
-    </section>
-  </main>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-brand">
-        <div class="logo logo-footer">Marso</div>
-        <p>
-          Book your trip in minute, get full control for much longer.
-        </p>
-      </div>
-
-      <div class="footer-columns">
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="#">About</a>
-          <a href="#">Careers</a>
-          <a href="#">Mobile</a>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="#">Help/FAQ</a>
+            <a href="#">Press</a>
+            <a href="#">Affiliates</a>
+          </div>
+          <div class="footer-col">
+            <h4>More</h4>
+            <a href="#">Airlinefees</a>
+            <a href="#">Airline</a>
+            <a href="#">Low fare tips</a>
+          </div>
         </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="#">Help/FAQ</a>
-          <a href="#">Press</a>
-          <a href="#">Affiliates</a>
-        </div>
-        <div class="footer-col">
-          <h4>More</h4>
-          <a href="#">Airlinefees</a>
-          <a href="#">Airline</a>
-          <a href="#">Low fare tips</a>
+
+        <div class="footer-right">
+          <div class="social-row">
+            <a href="#" class="social-circle">f</a>
+            <a href="#" class="social-circle">T</a>
+            <a href="#" class="social-circle">▶</a>
+          </div>
+          <p class="app-text">Discover our app</p>
+          <div class="store-badges">
+            <span class="badge">Google Play</span>
+            <span class="badge">App Store</span>
+          </div>
         </div>
       </div>
 
-      <div class="footer-right">
-        <div class="social-row">
-          <a href="#" class="social-circle">f</a>
-          <a href="#" class="social-circle">T</a>
-          <a href="#" class="social-circle">▶</a>
-        </div>
-        <p class="app-text">Discover our app</p>
-        <div class="store-badges">
-          <span class="badge">Google Play</span>
-          <span class="badge">App Store</span>
-        </div>
+      <div class="footer-bottom">
+        <p>All rights reserved @designer</p>
       </div>
-    </div>
+    </footer>
 
-    <div class="footer-bottom">
-      <p>All rights reserved @designer</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
