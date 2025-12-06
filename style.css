@@ -1041,7 +1041,7 @@ section {
     top: 100%;
     right: 0;
     padding: 1rem 1.5rem 0.5rem;
-    background: #ff7d68;
+    background-color: #ff7d68;
     flex-direction: column;
     gap: 0.8rem;
     border-bottom: 1px solid #ff7d68;
@@ -1053,17 +1053,11 @@ section {
     top: calc(100% + 160px);
     right: 0;
     padding: 0 1.5rem 1rem;
-<<<<<<< HEAD
-    background: #ff7d68;
+    background-color: #ff7d68;
     justify-content: center;
     flex-direction: column;
     padding-top: 5px;
     gap: 0.5rem;
-=======
-    background: rgba(255, 255, 255, 0.98);
-    justify-content: center;
-    gap: 1.5rem;
->>>>>>> 111e3bd821ff12d4401e1b0a6f74e2d70c33cbf3
   }
 
   .hero-container {
