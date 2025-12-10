@@ -389,9 +389,9 @@ section {
   box-shadow: var(--shadow-soft);
 }
 
-.service-card--active {
+/* .service-card--active {
   box-shadow: var(--shadow-soft);
-}
+} */
 
 /* .service-card--active::after {
   content: "";
@@ -940,10 +940,18 @@ section {
 }
 
 .badge {
+  display: flex;
+  align-items: center;
   font-size: 0.75rem;
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
   border: 1px solid #e7e7e7;
+  background-color: #000000;
+  color: white;
+}
+
+.apple{
+  
 }
 
 .footer-bottom {
