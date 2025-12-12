@@ -789,8 +789,8 @@ section {
 .subscribe-container {
   border-radius: 20px;
   padding: 2.8rem 2rem;
-  background: linear-gradient(135deg, #747def, #5e3be1);
-  color: #ffffff;
+  background-color: #DFD7F9;
+  color: #5E6282;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -859,7 +859,7 @@ section {
 
 /* ============ FOOTER ============ */
 .footer {
-  background: #ffffff;
+  background:url(footer_blur.png);
   padding-top: 3rem;
 }
 
